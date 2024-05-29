@@ -2,6 +2,60 @@
 
 An on-chain Automated Market Maker (AMM) built on Solana using the Anchor framework. SolSwap implements the constant-product invariant (`x * y = k`) with LP token minting/burning, configurable protocol fees, and slippage protection.
 
+## Architecture
+
+```mermaid
+flowchart TB
+    user["User wallet<br/>signs the transaction"]
+
+    subgraph prog["sol_swap Anchor program"]
+        init["initialize_pool(fee_bps)<br/>creates Pool + reserves + LP mint"]
+        add["add_liquidity(amount_a, amount_b, min_lp)"]
+        rem["remove_liquidity(lp_amount, min_a, min_b)"]
+        swp["swap(amount_in, min_amount_out, a_to_b)"]
+    end
+
+    subgraph accts["Program accounts"]
+        pool["Pool PDA<br/>seeds: pool, mint_a, mint_b<br/>reserve_a, reserve_b, fee_bps,<br/>total_lp_supply, bumps"]
+        auth["pool_authority PDA<br/>seeds: authority, mint_a, mint_b<br/>signs every CPI out of the pool"]
+        pos["UserPosition PDA<br/>seeds: position, pool, user<br/>lp_tokens held"]
+        ra[("token_a_reserve<br/>token account")]
+        rb[("token_b_reserve<br/>token account")]
+        lp[("LP mint")]
+    end
+
+    spl["SPL Token program<br/>transfer / mint_to / burn via CPI"]
+    ev["Events<br/>PoolInitialized, LiquidityAdded,<br/>LiquidityRemoved, SwapEvent"]
+
+    user --> init
+    user --> add
+    user --> rem
+    user --> swp
+
+    init --> pool
+    init --> auth
+    init --> lp
+    add --> pos
+    rem --> pos
+    add -->|"updates reserves and total_lp_supply"| pool
+    rem --> pool
+    swp --> pool
+
+    add -->|"user tokens in, LP tokens out"| spl
+    rem -->|"LP burned, tokens back to user"| spl
+    swp -->|"amount_in in, amount_out out"| spl
+    spl --> ra
+    spl --> rb
+    spl --> lp
+    auth -.->|"signer seeds"| spl
+
+    add --> ev
+    rem --> ev
+    swp --> ev
+```
+
+<img src="docs/amm-curve.svg" alt="Animated constant-product curve: a swap slides the pool reserves along x times y equals k and back again" width="900">
+
 ## AMM Math
 
 SolSwap uses the constant-product formula pioneered by Uniswap v2:
@@ -49,7 +103,7 @@ amount_a = lp_burn * reserve_a / total_lp_supply
 amount_b = lp_burn * reserve_b / total_lp_supply
 ```
 
-## Architecture
+## Repository Layout
 
 ```
 sol_swap/

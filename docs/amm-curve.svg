@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500" role="img" aria-label="Constant product curve with a swap moving the reserves along it">
+<title>SolSwap: a swap sliding along the constant-product curve</title>
+<text x="24" y="34" font-family="Helvetica,Arial,sans-serif" font-size="19" font-weight="bold" fill="#4c9be8">SolSwap &#8212; a swap slides the pool along x &#183; y = k</text>
+<text x="24" y="56" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#8b949e">tokens in raise reserve A and drain reserve B; the further you push, the worse the marginal price</text>
+<line x1="60" y1="418" x2="500" y2="418" stroke="#8b949e" stroke-width="2"/>
+<line x1="60" y1="418" x2="60" y2="70" stroke="#8b949e" stroke-width="2"/>
+<text x="400" y="440" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#8b949e">reserve_a &#8594;</text>
+<text x="48" y="135" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#8b949e" transform="rotate(-90 48 135)">reserve_b &#8594;</text>
+<path d="M 80.0 114.0 L 89.8 140.0 L 99.5 162.4 L 109.2 181.9 L 119.0 199.0 L 128.8 214.2 L 138.5 227.8 L 148.2 239.9 L 158.0 250.9 L 167.8 260.9 L 177.5 270.0 L 187.2 278.3 L 197.0 285.9 L 206.8 292.9 L 216.5 299.4 L 226.2 305.5 L 236.0 311.1 L 245.8 316.3 L 255.5 321.2 L 265.2 325.7 L 275.0 330.0 L 284.8 334.1 L 294.5 337.9 L 304.2 341.5 L 314.0 344.9 L 323.8 348.1 L 333.5 351.1 L 343.2 354.0 L 353.0 356.8 L 362.8 359.4 L 372.5 361.9 L 382.2 364.2 L 392.0 366.5 L 401.8 368.7 L 411.5 370.8 L 421.2 372.8 L 431.0 374.7 L 440.8 376.5 L 450.5 378.2 L 460.2 379.9 L 470.0 381.6" fill="none" stroke="#b07cd8" stroke-width="2.5" stroke-opacity="0.75"/>
+<text x="361.7" y="345.1" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#b07cd8">x &#183; y = k</text>
+<circle cx="154.8" cy="247.5" r="4.5" fill="none" stroke="#8b949e" stroke-width="2"/>
+<text x="130.8" y="233.5" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#8b949e">1000 A / 2000 B</text>
+<text x="223.6" y="335.7" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#8b949e">1400 A / 1429 B</text>
+<circle cx="233.6" cy="309.7" r="4.5" fill="none" stroke="#8b949e" stroke-width="2"/>
+<g>
+<line y1="418" y2="247" stroke="#4c9be8" stroke-width="1.5" stroke-dasharray="4 4" stroke-opacity="0.8">
+<animate attributeName="x1" values="154.8;154.8;233.6;233.6;154.8" keyTimes="0;0.12;0.45;0.62;1" dur="12s" repeatCount="indefinite"/>
+<animate attributeName="x2" values="154.8;154.8;233.6;233.6;154.8" keyTimes="0;0.12;0.45;0.62;1" dur="12s" repeatCount="indefinite"/>
+<animate attributeName="y2" values="247.5;247.5;309.7;309.7;247.5" keyTimes="0;0.12;0.45;0.62;1" dur="12s" repeatCount="indefinite"/>
+</line>
+<line x1="60" x2="154.8" stroke="#56b877" stroke-width="1.5" stroke-dasharray="4 4" stroke-opacity="0.8">
+<animate attributeName="x2" values="154.8;154.8;233.6;233.6;154.8" keyTimes="0;0.12;0.45;0.62;1" dur="12s" repeatCount="indefinite"/>
+<animate attributeName="y1" values="247.5;247.5;309.7;309.7;247.5" keyTimes="0;0.12;0.45;0.62;1" dur="12s" repeatCount="indefinite"/>
+<animate attributeName="y2" values="247.5;247.5;309.7;309.7;247.5" keyTimes="0;0.12;0.45;0.62;1" dur="12s" repeatCount="indefinite"/>
+</line>
+</g>
+<circle r="8" fill="#e8a33d" fill-opacity="0.9">
+<animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.12;0.45;1" path="M 154.8 247.5 L 156.8 249.7 L 158.8 251.8 L 160.8 253.8 L 162.7 255.9 L 164.7 257.9 L 166.7 259.8 L 168.6 261.8 L 170.6 263.6 L 172.6 265.5 L 174.5 267.3 L 176.5 269.1 L 178.5 270.8 L 180.5 272.6 L 182.4 274.3 L 184.4 275.9 L 186.4 277.5 L 188.3 279.2 L 190.3 280.7 L 192.3 282.3 L 194.2 283.8 L 196.2 285.3 L 198.2 286.8 L 200.2 288.2 L 202.1 289.7 L 204.1 291.1 L 206.1 292.5 L 208.0 293.8 L 210.0 295.2 L 212.0 296.5 L 213.9 297.8 L 215.9 299.1 L 217.9 300.3 L 219.8 301.6 L 221.8 302.8 L 223.8 304.0 L 225.8 305.2 L 227.7 306.3 L 229.7 307.5 L 231.7 308.6 L 233.6 309.7"/>
+<animate attributeName="opacity" values="1;1;0" keyTimes="0;0.6;0.62" dur="12s" repeatCount="indefinite"/>
+</circle>
+<circle r="8" fill="#56b877" fill-opacity="0.9" opacity="0">
+<animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.62;0.92;1" path="M 233.6 309.7 L 231.7 308.6 L 229.7 307.5 L 227.7 306.3 L 225.8 305.2 L 223.8 304.0 L 221.8 302.8 L 219.8 301.6 L 217.9 300.3 L 215.9 299.1 L 213.9 297.8 L 212.0 296.5 L 210.0 295.2 L 208.0 293.8 L 206.1 292.5 L 204.1 291.1 L 202.1 289.7 L 200.2 288.2 L 198.2 286.8 L 196.2 285.3 L 194.2 283.8 L 192.3 282.3 L 190.3 280.7 L 188.3 279.2 L 186.4 277.5 L 184.4 275.9 L 182.4 274.3 L 180.5 272.6 L 178.5 270.8 L 176.5 269.1 L 174.5 267.3 L 172.6 265.5 L 170.6 263.6 L 168.6 261.8 L 166.7 259.8 L 164.7 257.9 L 162.7 255.9 L 160.8 253.8 L 158.8 251.8 L 156.8 249.7 L 154.8 247.5"/>
+<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.62;0.64;0.95;0.97" dur="12s" repeatCount="indefinite"/>
+</circle>
+<text x="24" y="452" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#e8a33d" opacity="0">
+<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.13;0.55;0.5700000000000001" dur="12s" repeatCount="indefinite"/>
+swap(amount_in = 400 A, a_to_b = true)  &#8594;  amount_out = 570 B</text>
+<text x="24" y="452" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#56b877" opacity="0">
+<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.64;0.93;0.9500000000000001" dur="12s" repeatCount="indefinite"/>
+swap(amount_in = 570 B, a_to_b = false)  &#8594;  back toward the start</text>
+<text x="24" y="478" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#8b949e">the 0.30% fee stays in the reserves, so k creeps up slightly with every swap</text>
+<text x="545" y="104" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#8b949e">swap instruction, in order</text>
+<g opacity="0.25">
+<animate attributeName="opacity" values="0.25;0.25;1;1;0.25" keyTimes="0;0.14;0.16;0.95;0.97" dur="12s" repeatCount="indefinite"/>
+<circle cx="556" cy="127" r="11" fill="none" stroke="#4c9be8" stroke-width="2"/>
+<text x="556" y="131" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#4c9be8" text-anchor="middle">1</text>
+<text x="577" y="131" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#8b949e">amount_in_after_fee = amount_in &#215; (10000 - fee_bps) / 10000</text>
+</g>
+<g opacity="0.25">
+<animate attributeName="opacity" values="0.25;0.25;1;1;0.25" keyTimes="0;0.22;0.24;0.95;0.97" dur="12s" repeatCount="indefinite"/>
+<circle cx="556" cy="167" r="11" fill="none" stroke="#4c9be8" stroke-width="2"/>
+<text x="556" y="171" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#4c9be8" text-anchor="middle">2</text>
+<text x="577" y="171" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#8b949e">amount_out = reserve_out &#215; in_fee / (reserve_in + in_fee)</text>
+</g>
+<g opacity="0.25">
+<animate attributeName="opacity" values="0.25;0.25;1;1;0.25" keyTimes="0;0.30;0.32;0.95;0.97" dur="12s" repeatCount="indefinite"/>
+<circle cx="556" cy="207" r="11" fill="none" stroke="#4c9be8" stroke-width="2"/>
+<text x="556" y="211" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#4c9be8" text-anchor="middle">3</text>
+<text x="577" y="211" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#8b949e">require amount_out &#8805; min_amount_out  else SlippageExceeded</text>
+</g>
+<g opacity="0.25">
+<animate attributeName="opacity" values="0.25;0.25;1;1;0.25" keyTimes="0;0.36;0.38;0.95;0.97" dur="12s" repeatCount="indefinite"/>
+<circle cx="556" cy="247" r="11" fill="none" stroke="#4c9be8" stroke-width="2"/>
+<text x="556" y="251" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#4c9be8" text-anchor="middle">4</text>
+<text x="577" y="251" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#8b949e">CPI transfer: user &#8594; reserve_in  (user signs)</text>
+</g>
+<g opacity="0.25">
+<animate attributeName="opacity" values="0.25;0.25;1;1;0.25" keyTimes="0;0.42;0.44;0.95;0.97" dur="12s" repeatCount="indefinite"/>
+<circle cx="556" cy="287" r="11" fill="none" stroke="#4c9be8" stroke-width="2"/>
+<text x="556" y="291" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#4c9be8" text-anchor="middle">5</text>
+<text x="577" y="291" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#8b949e">CPI transfer: reserve_out &#8594; user  (pool_authority PDA signs)</text>
+</g>
+<g opacity="0.25">
+<animate attributeName="opacity" values="0.25;0.25;1;1;0.25" keyTimes="0;0.48;0.5;0.95;0.97" dur="12s" repeatCount="indefinite"/>
+<circle cx="556" cy="327" r="11" fill="none" stroke="#4c9be8" stroke-width="2"/>
+<text x="556" y="331" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#4c9be8" text-anchor="middle">6</text>
+<text x="577" y="331" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#8b949e">pool.reserve_a += amount_in, pool.reserve_b -= amount_out</text>
+</g>
+<g opacity="0.25">
+<animate attributeName="opacity" values="0.25;0.25;1;1;0.25" keyTimes="0;0.54;0.56;0.95;0.97" dur="12s" repeatCount="indefinite"/>
+<circle cx="556" cy="367" r="11" fill="none" stroke="#4c9be8" stroke-width="2"/>
+<text x="556" y="371" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#4c9be8" text-anchor="middle">7</text>
+<text x="577" y="371" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#8b949e">emit SwapEvent</text>
+</g>
+</svg>
